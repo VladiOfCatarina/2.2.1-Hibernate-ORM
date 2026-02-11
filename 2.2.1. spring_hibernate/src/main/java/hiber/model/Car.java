@@ -16,8 +16,7 @@ public class Car {
     @Column
     private int series;
 
-    @OneToOne
-    @JoinColumn(name = "id")
+    @OneToOne(mappedBy = "car")
     private User user;
 
     public Car(String model, int series) {
